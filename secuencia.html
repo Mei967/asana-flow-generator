@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asana Flow – Lienzo de Secuencias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TÍTULO CENTRADO -->
+    <header id="header-title">
+        <h1>Asana Flow Generator</h1>
+    </header>
+
+    <!-- BARRA SUPERIOR -->
+    <nav id="top-menu">
+        <button class="menu-btn">Guardar</button>
+        <button class="menu-btn">Exportar</button>
+        <button class="menu-btn">Imprimir</button>
+        <button class="menu-btn">Compartir</button>
+    </nav>
+
+    <!-- LAYOUT PRINCIPAL DE LA PÁGINA 2 -->
+    <div id="sequence-layout">
+
+        <!-- PANEL IZQUIERDO -->
+        <aside id="left-panel">
+
+            <!-- Biblioteca resumida -->
+            <section id="left-library">
+                <h2>Biblioteca</h2>
+                <div id="short-posture-list">
+                    <button class="posture-item">Adho Mukha Virasana</button>
+                    <!-- más posturas aquí luego -->
+                </div>
+            </section>
+
+            <!-- Controles -->
+            <section id="controls">
+                <h2>Opciones</h2>
+
+                <div class="menu-row">
+                    <label for="breath-select">Respiración:</label>
+                    <select id="breath-select">
+                        <option>In</option>
+                        <option>Ex</option>
+                        <option>In/Ex</option>
+                    </select>
+                </div>
+
+                <div class="menu-row">
+                    <label for="reps-input">Repeticiones:</label>
+                    <input type="number" id="reps-input" min="1" value="1">
+                </div>
+
+                <div class="menu-row">
+                    <label for="hold-input">Mantener (segundos):</label>
+                    <input type="number" id="hold-input" min="0" value="0">
+                </div>
+
+                <button id="add-button">Agregar a la secuencia</button>
+            </section>
+
+            <!-- Vista previa -->
+            <section id="preview">
+                <h2>Vista previa</h2>
+                <div id="asana-viewer"></div>
+            </section>
+
+            <!-- Botón para volver a biblioteca -->
+            <a id="go-back" href="biblioteca.html">← Volver a Biblioteca</a>
+
+        </aside>
+
+        <!-- LIENZO DE SECUENCIA -->
+        <main id="sequence-panel">
+            <h2>Lienzo de Secuencia</h2>
+            <div id="sequence-container">
+                <!-- Aquí irán las tarjetas de las posturas -->
+            </div>
+        </main>
+
+    </div>
+
+<script src="asana-flow-generator.js"></script>
+
+</body>
+</html>

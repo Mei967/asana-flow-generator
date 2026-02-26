@@ -1,0 +1,164 @@
+/* ===== RESET BÁSICO ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #F5F3EE; /* Fondo principal Japandi */
+    color: #000;
+}
+
+/* ===== HEADER ===== */
+#header-title {
+    text-align: center;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #D4CBB8;
+}
+
+/* ===== LAYOUT GENERAL ===== */
+#app-layout {
+    display: flex;
+    height: calc(100vh - 100px);
+}
+
+/* ===== SIDEBAR ===== */
+#sidebar {
+    width: 260px;
+    background-color: #E8E3DA; /* Arena suave */
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* BLOQUES DEL SIDEBAR */
+.menu-block {
+    margin-bottom: 15px;
+}
+
+/* TÍTULOS DE BLOQUE */
+.block-title {
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* LÍNEA DIVISORIA */
+.divider {
+    border: none;
+    border-top: 1px solid #CFC6B3;
+    margin: 20px 0;
+}
+
+/* ===== BOTONES PRINCIPALES ===== */
+.menu-item,
+.accordion-btn {
+    width: 100%;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    background-color: #D4CBB8; /* Beige medio */
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* HOVER */
+.menu-item:hover,
+.accordion-btn:hover {
+    background-color: #C4BBA7;
+    transform: translateY(-1px);
+}
+
+/* ===== ACORDEÓN ===== */
+.accordion-content {
+    display: none;
+    padding-left: 12px;
+    margin-bottom: 10px;
+}
+
+/* BOTONES INTERNOS (POSTURAS) */
+.accordion-content button {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 6px;
+    background-color: #F5F3EE;
+    border: 1px solid #D4CBB8;
+    text-align: left;
+    font-size: 13px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.accordion-content button:hover {
+    background-color: #E8E3DA;
+}
+
+/* ===== PANEL DERECHO ===== */
+#view-container {
+    flex: 1;
+    padding: 30px;
+    background-color: #FFFFFF;
+    overflow-y: auto;
+}
+
+/* VISTAS DINÁMICAS */
+.view {
+    display: none;
+}
+
+.view.active {
+    display: block;
+}
+
+/* ===== GENERADOR ===== */
+#sequence-container {
+    min-height: 250px;
+    border: 2px dashed #D4CBB8;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #FAF8F4;
+}
+
+/* ===== EDITOR ===== */
+#editor-layout {
+    display: flex;
+    gap: 20px;
+}
+
+#editor-canvas {
+    flex: 2;
+    border: 2px solid #D4CBB8;
+    border-radius: 8px;
+    min-height: 400px;
+    background-color: #FAF8F4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#editor-panel {
+    flex: 1;
+    border: 2px solid #D4CBB8;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #FAF8F4;
+}
+
+/* ===== TIPOGRAFÍA ===== */
+h1, h2, h3, h4 {
+    margin-top: 0;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.6;
+}

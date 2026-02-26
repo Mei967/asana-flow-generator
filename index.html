@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Asana Flow Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header id="header-title">
+    <h1>Asana Flow Generator</h1>
+</header>
+
+<div id="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar">
+        <nav>
+
+            <!-- BLOQUE 1: NAVEGACIÓN GENERAL -->
+            <div class="menu-block">
+                <button class="menu-item" data-view="view-inicio">Inicio</button>
+
+                 <button class="accordion-btn">Tipos de Yoga ▾</button>
+
+                    <div class="accordion-content">
+
+                    <button class="menu-item" data-view="view-hatha">Hatha Yoga</button>
+                    <button class="menu-item" data-view="view-vinyasa">Vinyasa</button>
+                    <button class="menu-item" data-view="view-restaurativo">Yoga Restaurativo</button>
+                    <button class="menu-item" data-view="view-yin">Yin Yoga</button>
+
+                 </div>
+
+</div>
+
+            <hr class="divider">
+
+            <!-- BLOQUE 2: BIBLIOTECA -->
+            <div class="menu-block">
+
+                <h3 class="block-title">Biblioteca de Posturas</h3>
+
+                <button class="accordion-btn">Hatha Yoga ▾</button>
+                <div class="accordion-content" id="posturas-hatha"></div>
+
+                <button class="accordion-btn">Yin Yoga ▾</button>
+                <div class="accordion-content" id="posturas-yin"></div>
+
+            </div>
+
+            <hr class="divider">
+
+            <!-- BLOQUE 3: HERRAMIENTAS -->
+            <div class="menu-block">
+                <button class="menu-item" data-view="view-generador">
+                    Generador de Secuencias
+                </button>
+
+                <button class="menu-item" data-view="view-editor">
+                    Editor de Asanas
+                </button>
+            </div>
+
+        </nav>
+    </aside>
+
+    <!-- PANEL DERECHO DINÁMICO -->
+    <main id="view-container">
+
+        <!-- INICIO -->
+        <section id="view-inicio" class="view active">
+            <h2>Bienvenida/o</h2>
+            <p>
+                Desde aquí podrás explorar posturas, crear secuencias
+                y diseñar nuevas asanas.
+            </p>
+        </section>
+
+        <!-- TIPOS DE YOGA -->
+        <section id="view-tipos" class="view">
+            <h2>Tipos de Yoga</h2>
+            <p>Aquí podrás explorar cada estilo de yoga.</p>
+        </section>
+
+        <!-- GENERADOR -->
+        <section id="view-generador" class="view">
+            <h2>Generador de Secuencias</h2>
+            <div id="sequence-container"></div>
+        </section>
+
+        <!-- EDITOR -->
+        <section id="view-editor" class="view">
+            <h2>Editor de Asanas</h2>
+            <div id="editor-layout">
+                <div id="editor-canvas"></div>
+                <div id="editor-panel"></div>
+            </div>
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/asanas.js"></script>
+<script src="js/biblioteca.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
